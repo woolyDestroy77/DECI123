@@ -18,4 +18,13 @@ async function fetchRandomUserData() {
     } catch(error) {
         console.error('Error fetching user data:', error);
     }
+
+    async function displayUserData(){
+        const display= fetchRandomUserData();
+        console.log(`name:${display.name}
+                Email:${display.email}`
+        );
+
+    }
+    displayUserData()
 }
